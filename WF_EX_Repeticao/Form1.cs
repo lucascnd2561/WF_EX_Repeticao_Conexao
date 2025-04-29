@@ -97,6 +97,7 @@ namespace WF_EX_Repeticao
                 Conexao.Open();
 
                 MySqlCommand buscar = new MySqlCommand(, Conexao);
+                buscar.Parameters.AddWithValue(sql, Conexao);
             }catch
             {
 
