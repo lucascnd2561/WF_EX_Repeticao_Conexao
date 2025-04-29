@@ -98,6 +98,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cadastrar usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastrar usuario.Designer.cs">
+      <DependentUpon>Cadastrar usuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

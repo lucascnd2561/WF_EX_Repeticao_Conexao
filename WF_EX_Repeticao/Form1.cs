@@ -85,6 +85,23 @@ namespace WF_EX_Repeticao
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string busca = "%" + txtBuscar.Text + "%";
+
+                Conexao = new MySqlConnection(data_source);
+
+                string bananasql = "Select * From pessoa where nome Like @m or telefone like @x  ";
+
+
+                Conexao.Open();
+
+                MySqlCommand buscar = new MySqlCommand(, Conexao);
+            }catch
+            {
+
+            }
+            
 
         }
     }
