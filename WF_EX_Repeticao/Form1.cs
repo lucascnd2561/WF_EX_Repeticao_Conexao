@@ -37,7 +37,7 @@ namespace WF_EX_Repeticao
                 if (id_contato_selecionado == null)
                 {
                     cmd.Parameters.Clear();
-                    cmd.CommandText = "INSERTO INTO Pessoa " + "( nome, email, cpf, idade)" + "values" + "(@nome, @email, @cpf, @idade)";
+                    cmd.CommandText = "INSERT INTO Pessoa " + "( nome, email, cpf, idade)" + "values" + "(@nome, @email, @cpf, @idade)";
 
                     cmd.Parameters.AddWithValue("@nome", txtNome.Text);
                     cmd.Parameters.AddWithValue("@email", txtEmail.Text);
@@ -47,7 +47,7 @@ namespace WF_EX_Repeticao
                 else
                 {
                     cmd.Parameters.Clear();
-                    cmd.CommandText = "Update cliente" + "SET nome = @nome, email = @email, cpf = @cpf, idade = @idade " + "Where id = @id ";
+                    cmd.CommandText = "Update pessoa" + "SET nome = @nome, email = @email, cpf = @cpf, idade = @idade " + "Where id = @id ";
 
                     cmd.Parameters.AddWithValue("@id", id_contato_selecionado);
                     cmd.Parameters.AddWithValue("@nome", txtNome.Text);
@@ -91,16 +91,41 @@ namespace WF_EX_Repeticao
 
                 Conexao = new MySqlConnection(data_source);
 
-                string bananasql = "Select * From pessoa where nome Like @m or telefone like @x  ";
+                string bananasql = "SELECT * FROM pessoa WHERE nome LIKE @m OR telefone LIKE @x  ";
 
 
                 Conexao.Open();
 
-                MySqlCommand buscar = new MySqlCommand(, Conexao);
-                buscar.Parameters.AddWithValue(sql, Conexao);
-            }catch
-            {
+                MySqlCommand buscar = new MySqlCommand(bananasql, Conexao);
+                buscar.Parameters.AddWithValue("@m", busca);
+                buscar.Parameters.AddWithValue("@x", busca);
 
+                MySqlDataReader reader = buscar.ExecuteReader();
+
+                lstPessoa.Items.Clear();
+
+                while(reader.Read())
+                {
+                    string[] linha =
+                    {
+                        reader.GetInt32(0).ToString(),  // id
+                        reader.GetString(1),            // nome           
+                        reader.GetString(2),            // cpf
+                        reader.GetString(3),            // email
+
+                    };
+                    var linha_list_view = new ListViewItem(linha);
+                    lstPessoa.Items.Add(linha_list_view);
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                if (Conexao != null) 
+                Conexao.Close();
             }
             
 

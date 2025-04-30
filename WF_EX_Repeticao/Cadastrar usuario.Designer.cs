@@ -41,85 +41,94 @@
             // 
             // txtLogin
             // 
-            this.txtLogin.Location = new System.Drawing.Point(131, 57);
+            this.txtLogin.Location = new System.Drawing.Point(87, 37);
+            this.txtLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(200, 26);
+            this.txtLogin.Size = new System.Drawing.Size(135, 20);
             this.txtLogin.TabIndex = 0;
             // 
             // lblLogin
             // 
             this.lblLogin.AutoSize = true;
-            this.lblLogin.Location = new System.Drawing.Point(195, 18);
+            this.lblLogin.Location = new System.Drawing.Point(130, 12);
+            this.lblLogin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(42, 20);
+            this.lblLogin.Size = new System.Drawing.Size(29, 13);
             this.lblLogin.TabIndex = 1;
             this.lblLogin.Text = "login";
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(78, 323);
+            this.btnCadastrar.Location = new System.Drawing.Point(48, 210);
+            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(88, 54);
+            this.btnCadastrar.Size = new System.Drawing.Size(67, 35);
             this.btnCadastrar.TabIndex = 2;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             // 
             // btnNovo
             // 
-            this.btnNovo.Location = new System.Drawing.Point(208, 323);
+            this.btnNovo.Location = new System.Drawing.Point(139, 210);
+            this.btnNovo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(88, 54);
+            this.btnNovo.Size = new System.Drawing.Size(59, 35);
             this.btnNovo.TabIndex = 3;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = true;
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(343, 323);
+            this.btnExcluir.Location = new System.Drawing.Point(229, 210);
+            this.btnExcluir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(88, 54);
+            this.btnExcluir.Size = new System.Drawing.Size(59, 35);
             this.btnExcluir.TabIndex = 4;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             // 
             // txtSenha
             // 
-            this.txtSenha.Location = new System.Drawing.Point(131, 142);
+            this.txtSenha.Location = new System.Drawing.Point(87, 92);
+            this.txtSenha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(200, 26);
+            this.txtSenha.Size = new System.Drawing.Size(135, 20);
             this.txtSenha.TabIndex = 5;
             // 
             // lblSenha
             // 
             this.lblSenha.AutoSize = true;
-            this.lblSenha.Location = new System.Drawing.Point(195, 110);
+            this.lblSenha.Location = new System.Drawing.Point(130, 72);
+            this.lblSenha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(56, 20);
+            this.lblSenha.Size = new System.Drawing.Size(38, 13);
             this.lblSenha.TabIndex = 6;
             this.lblSenha.Text = "Senha";
             // 
             // cbxTipoUsuario
             // 
             this.cbxTipoUsuario.FormattingEnabled = true;
-            this.cbxTipoUsuario.Location = new System.Drawing.Point(131, 240);
+            this.cbxTipoUsuario.Location = new System.Drawing.Point(87, 156);
+            this.cbxTipoUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxTipoUsuario.Name = "cbxTipoUsuario";
-            this.cbxTipoUsuario.Size = new System.Drawing.Size(200, 28);
+            this.cbxTipoUsuario.Size = new System.Drawing.Size(135, 21);
             this.cbxTipoUsuario.TabIndex = 7;
             // 
             // lblTipoUsuario
             // 
             this.lblTipoUsuario.AutoSize = true;
-            this.lblTipoUsuario.Location = new System.Drawing.Point(180, 203);
+            this.lblTipoUsuario.Location = new System.Drawing.Point(120, 132);
+            this.lblTipoUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTipoUsuario.Name = "lblTipoUsuario";
-            this.lblTipoUsuario.Size = new System.Drawing.Size(98, 20);
+            this.lblTipoUsuario.Size = new System.Drawing.Size(67, 13);
             this.lblTipoUsuario.TabIndex = 8;
             this.lblTipoUsuario.Text = "Tipo Usuario";
             // 
             // Cadastrar_usuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(474, 450);
+            this.ClientSize = new System.Drawing.Size(316, 292);
             this.Controls.Add(this.lblTipoUsuario);
             this.Controls.Add(this.cbxTipoUsuario);
             this.Controls.Add(this.lblSenha);
@@ -129,6 +138,7 @@
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.txtLogin);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Cadastrar_usuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastrar_usuario";
