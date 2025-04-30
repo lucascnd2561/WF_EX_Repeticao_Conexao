@@ -43,6 +43,7 @@ namespace WF_EX_Repeticao
                     cmd.Parameters.AddWithValue("@email", txtEmail.Text);
                     cmd.Parameters.AddWithValue("@cpf", txtCPF.Text);
                     cmd.Parameters.AddWithValue("@idade", txtIdade.Text);
+                    MessageBox.Show("Contato Pessoa Inserido com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
